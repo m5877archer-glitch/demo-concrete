@@ -67,10 +67,10 @@ section{padding:72px 0}
 
 /* work */
 #work{background:var(--white)}
-.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:210px;gap:10px}
+.gallery{display:grid;grid-template-columns:3fr 2fr;grid-auto-rows:220px;gap:10px}
 .gallery figure{margin:0;position:relative;border-radius:2px;overflow:hidden;background:var(--aggregate)}
 .gallery figure:first-child{grid-row:span 2}
-.gallery img{width:100%;height:100%;object-fit:cover}
+.gallery img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 /* texture shown until real photos are dropped in */
 .gallery .ph{position:absolute;inset:0;
   background:
@@ -166,13 +166,11 @@ textarea{min-height:120px;resize:vertical}
   <section id="work">
     <div class="wrap">
       <h2>Recent work</h2>
-      <!-- To use real photos: replace each <div class="ph"></div> with <img src="photo.jpg" alt="description"> -->
+      <!-- Photos: upload files with these exact names next to index.html. If one is missing, the gray texture shows instead. -->
       <div class="gallery">
-        <figure><div class="ph"></div><figcaption>Stamped patio, San Elijo Hills</figcaption></figure>
-        <figure><div class="ph"></div><figcaption>Driveway replacement, Vista</figcaption></figure>
-        <figure><div class="ph"></div><figcaption>Front walkway, Escondido</figcaption></figure>
-        <figure><div class="ph"></div><figcaption>Pool deck, Carlsbad</figcaption></figure>
-        <figure><div class="ph"></div><figcaption>Side yard path, San Marcos</figcaption></figure>
+        <figure><div class="ph"></div><img src="driveway1.jpg" alt="Concrete driveway leading to a white house" loading="lazy" onerror="this.remove()"><figcaption>New driveway, San Marcos</figcaption></figure>
+        <figure><div class="ph"></div><img src="driveway2.jpg" alt="Fresh concrete slab in front of a garage" loading="lazy" onerror="this.remove()"><figcaption>Driveway replacement, Vista</figcaption></figure>
+        <figure><div class="ph"></div><img src="driveway3.jpg" alt="Wide new driveway at a modern home" loading="lazy" onerror="this.remove()"><figcaption>Two-car driveway, Carlsbad</figcaption></figure>
       </div>
     </div>
   </section>
